@@ -22,8 +22,6 @@ library(jsonlite)
 # load the original data
 business_data_original = lapply(readLines("raw_data/business.json"), fromJSON)
 print("original data loaded")
-save(business_data_original, file = "rdata/business_original.Rdata")
-print("original business data saved to an Rdata file")
 
 
 ############################################
@@ -69,6 +67,7 @@ for (i in 2:7){
 # create col names for the dataframe regarding business hours
 # M = Monday, T = Tuesday, W = Wednesday, TH = Thursday
 # F = Friday, S = Saturday, SU = Sunday
+# O = Opening, C = Closing
 day = c("M_", "T_", "W_", "TH_", "F_", "S_", "SU_")
 cname_business_hours = c("business_id", as.vector(sapply(day, paste0, c("O", "C"))))
 
