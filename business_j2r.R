@@ -22,8 +22,6 @@ library(jsonlite)
 # load the original data
 business_data_original = lapply(readLines("raw_data/business.json"), fromJSON)
 print("original data loaded")
-save(business_data_original, file = "rdata/business_original.Rdata")
-print("original business data saved to an Rdata file")
 
 
 ############################################
