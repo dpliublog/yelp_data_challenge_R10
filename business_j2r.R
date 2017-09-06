@@ -18,7 +18,6 @@ library(jsonlite)
 
 ## SET YOUR WORKING DIRECTORY HERE W/ setwd()##
 
-
 # load the original data
 business_data_original = lapply(readLines("raw_data/business.json"), fromJSON)
 print("original data loaded")
